@@ -1,29 +1,30 @@
 ---
-  # Title: Ansible role PXE server
-  #
-  # Author: Luc Rutten
-  # Version: 1.0
-  # File: defaults/main.yml
-  #
-  # Description: PXE TFTP boot server
+# Title: Ansible role PXE server
+#
+# Author: Luc Rutten
+# Version: 1.0
+# File: defaults/main.yml
+#
+# Description: PXE TFTP boot server
 
-  ### PXE server settings
-  pxe_subnet                     : '192.168.0.0'
-  pxe_tftpboot_dir               : '/opt/tftpboot'
+### PXE server settings
+pxe_subnet: '192.168.1.0'
+pxe_tftpboot_dir: '/opt/tftpboot'
 
 
-  ### Preseed.cfg Variable(s)
+### Preseed.cfg Variable(s)
 
-  # Kernel Options
-  pxe_preseed_locale             : 'en_GB.UTF-8'
-  pxe_preseed_keyboard           : 'us'
-    
-  # Timezone
-  pxe_preseed_timezone           : 'Europe/Amsterdam'
+# Kernel Options
+pxe_preseed_locale: 'en_US.UTF-8'
+pxe_preseed_keyboard: 'us'
 
-  # Username & Password
-  pxe_preseed_user               : 'administrator'
-  pxe_preseed_user_password      : 'Welkom123'
+# Timezone
+pxe_preseed_timezone: 'Montreal/America'
 
-  # Mirror
-  pxe_preseed_mirror             : 'nl.archive.ubuntu.com'
+# Username & Password
+pxe_preseed_user: 'administrator'
+pxe_preseed_user_password: 'password'
+
+# Mirror
+# pxe_preseed_mirror: 'nl.archive.ubuntu.com'
+pxe_preseed_mirror: ubuntu-cd.mirror.iweb.ca
